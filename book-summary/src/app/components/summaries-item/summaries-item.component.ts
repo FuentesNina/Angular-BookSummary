@@ -15,7 +15,7 @@ export class SummariesItemComponent {
 
   getChapterTitle(chapter: Summary["chapter"]) {
     const found = CHAPTERS.find(title => title.id === chapter);
-    const title = typeof chapter === 'number' ? `${chapter}. ${found?.title}` : found?.title;
+    const title = Number(chapter) ? `${chapter}. ${found?.title}` : found?.title;
 
     return title;
   }

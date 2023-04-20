@@ -1,6 +1,6 @@
 export interface Summary {
     id?: number,
-    chapter: number | string;
+    chapter: string;
     summary: string;
     persist: boolean;
 }
